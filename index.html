@@ -13,28 +13,28 @@
 
   <style>
     /* ===================================================
-       1. CSS VARIABLES & DESIGN SYSTEM (Anime Green Theme)
+       1. CSS VARIABLES & DESIGN SYSTEM (Anime Orange-Yellow Theme)
        =================================================== */
     :root {
-      --bg-base: #080f0b;
-      --bg-surface: #0e1c15;
-      --bg-card: rgba(18, 38, 29, 0.65);
-      --bg-card-hover: rgba(24, 52, 39, 0.85);
-      --border-color: rgba(52, 211, 153, 0.2);
-      --border-glow: rgba(52, 211, 153, 0.5);
+      --bg-base: #0f0a06;
+      --bg-surface: #1a110a;
+      --bg-card: rgba(40, 24, 12, 0.65);
+      --bg-card-hover: rgba(58, 34, 18, 0.85);
+      --border-color: rgba(251, 146, 60, 0.22);
+      --border-glow: rgba(251, 146, 60, 0.55);
 
-      /* Primary Greens */
-      --primary: #10b981;
-      --primary-light: #34d399;
-      --primary-glow: #6ee7b7;
-      --primary-dark: #064e3b;
-      --accent-neon: #00ff9d;
+      /* Primary Orange & Yellow */
+      --primary: #f97316;
+      --primary-light: #fb923c;
+      --primary-glow: #fdba74;
+      --primary-dark: #9a3412;
+      --accent-neon: #fbbf24;
       --accent-yellow: #fde047;
 
       /* Text Colors */
-      --text-main: #f0fdf4;
-      --text-muted: #a7f3d0;
-      --text-sub: #6ee7b7;
+      --text-main: #fffbeb;
+      --text-muted: #fed7aa;
+      --text-sub: #fba458;
 
       /* Radii & Shadows */
       --radius-sm: 10px;
@@ -42,9 +42,9 @@
       --radius-lg: 28px;
       --radius-full: 9999px;
 
-      --shadow-glow: 0 0 25px rgba(16, 185, 129, 0.3);
-      --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.45);
-      --shadow-neon: 0 0 15px rgba(0, 255, 157, 0.6);
+      --shadow-glow: 0 0 25px rgba(249, 115, 22, 0.35);
+      --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.5);
+      --shadow-neon: 0 0 15px rgba(251, 191, 36, 0.65);
 
       --font-display: 'Zen Maru Gothic', 'Outfit', sans-serif;
       --font-body: 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -71,15 +71,15 @@
       position: relative;
     }
 
-    /* Dynamic Anime Mesh Background */
+    /* Dynamic Anime Mesh Background (Warm Sunset Amber) */
     .bg-mesh {
       position: fixed;
       inset: 0;
       z-index: -2;
       background: 
-        radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.18) 0%, transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(5, 150, 105, 0.22) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 15% 20%, rgba(249, 115, 22, 0.2) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(234, 88, 12, 0.22) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 60%),
         var(--bg-base);
       background-attachment: fixed;
     }
@@ -90,8 +90,8 @@
       inset: 0;
       z-index: -1;
       background-image: 
-        linear-gradient(rgba(52, 211, 153, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(52, 211, 153, 0.04) 1px, transparent 1px);
+        linear-gradient(rgba(251, 146, 60, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(251, 146, 60, 0.04) 1px, transparent 1px);
       background-size: 36px 36px;
       pointer-events: none;
     }
@@ -158,7 +158,7 @@
       width: calc(100% - 2rem);
       max-width: 900px;
       z-index: 100;
-      background: rgba(14, 28, 21, 0.75);
+      background: rgba(26, 17, 10, 0.78);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border: 1px solid var(--border-color);
@@ -167,7 +167,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
       transition: all 0.3s ease;
     }
 
@@ -190,7 +190,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #042114;
+      color: #3b1100;
       font-weight: 900;
       font-size: 0.85rem;
       box-shadow: var(--shadow-neon);
@@ -215,11 +215,11 @@
 
     .nav-link:hover {
       color: var(--accent-neon);
-      background: rgba(52, 211, 153, 0.12);
+      background: rgba(251, 146, 60, 0.15);
     }
 
     .nav-tag {
-      background: rgba(16, 185, 129, 0.2);
+      background: rgba(249, 115, 22, 0.18);
       border: 1px solid var(--primary-light);
       color: var(--accent-neon);
       padding: 0.3rem 0.85rem;
@@ -272,7 +272,7 @@
       position: absolute;
       inset: -8px;
       border-radius: 50%;
-      background: conic-gradient(from 0deg, var(--accent-neon), var(--primary), #3b82f6, var(--accent-neon));
+      background: conic-gradient(from 0deg, var(--accent-neon), var(--primary), #ea580c, var(--accent-yellow), var(--accent-neon));
       animation: spinRing 6s linear infinite;
       filter: blur(1px);
     }
@@ -281,7 +281,7 @@
       position: absolute;
       inset: -15px;
       border-radius: 50%;
-      background: var(--accent-neon);
+      background: var(--primary);
       filter: blur(22px);
       opacity: 0.45;
       z-index: 0;
@@ -302,14 +302,14 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      border: 4px solid #080f0b;
+      border: 4px solid #0f0a06;
       overflow: hidden;
-      background: linear-gradient(135deg, #103824, #081a10);
+      background: linear-gradient(135deg, #3d1b09, #1c0e04);
       z-index: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.65);
       transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
@@ -321,7 +321,7 @@
       transform: scale(0.96);
     }
 
-    /* Anime SVG Avatar Graphic */
+    /* Anime SVG Avatar Graphic (Warm Orange-Yellow Anime Persona) */
     .avatar-svg {
       width: 100%;
       height: 100%;
@@ -333,7 +333,7 @@
       position: absolute;
       bottom: -6px;
       right: 0px;
-      background: #064e3b;
+      background: #7c2d12;
       border: 2px solid var(--accent-neon);
       color: var(--accent-neon);
       border-radius: var(--radius-full);
@@ -374,11 +374,11 @@
       line-height: 1.15;
       letter-spacing: 1px;
       margin-bottom: 1.2rem;
-      text-shadow: 0 0 25px rgba(52, 211, 153, 0.4);
+      text-shadow: 0 0 25px rgba(249, 115, 22, 0.45);
     }
 
     .hero-title span {
-      background: linear-gradient(135deg, #ffffff 10%, var(--accent-neon) 90%);
+      background: linear-gradient(135deg, #ffffff 10%, var(--accent-neon) 60%, var(--primary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -386,12 +386,12 @@
     /* Dialogue / Speech Bubble (Anime style) */
     .dialogue-box {
       position: relative;
-      background: linear-gradient(145deg, rgba(20, 48, 35, 0.85), rgba(10, 25, 18, 0.95));
+      background: linear-gradient(145deg, rgba(62, 33, 14, 0.88), rgba(26, 14, 6, 0.96));
       border: 2px solid var(--primary-light);
       border-radius: var(--radius-md);
       padding: 1.2rem 2.2rem;
       max-width: 600px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.12);
       margin-bottom: 2rem;
       animation: hoverBubble 4s ease-in-out infinite;
     }
@@ -420,15 +420,15 @@
       transform: translateX(-50%);
       border-width: 0 10px 10px 10px;
       border-style: solid;
-      border-color: transparent transparent #163628 transparent;
+      border-color: transparent transparent #3e210e transparent;
     }
 
     .dialogue-speaker {
       position: absolute;
       top: -14px;
       left: 20px;
-      background: var(--primary);
-      color: #042114;
+      background: linear-gradient(135deg, var(--accent-neon), var(--primary));
+      color: #3b1100;
       font-size: 0.75rem;
       font-weight: 900;
       padding: 0.2rem 0.7rem;
@@ -447,7 +447,7 @@
 
     .dialogue-text .highlight {
       color: var(--accent-neon);
-      text-shadow: 0 0 12px rgba(0, 255, 157, 0.5);
+      text-shadow: 0 0 14px rgba(251, 191, 36, 0.55);
     }
 
     /* Style Tag Pills */
@@ -460,8 +460,8 @@
     }
 
     .meta-pill {
-      background: rgba(16, 185, 129, 0.12);
-      border: 1px solid rgba(52, 211, 153, 0.25);
+      background: rgba(249, 115, 22, 0.14);
+      border: 1px solid rgba(251, 146, 60, 0.3);
       color: var(--text-muted);
       padding: 0.5rem 1.1rem;
       border-radius: var(--radius-full);
@@ -474,18 +474,18 @@
     }
 
     .meta-pill:hover {
-      background: rgba(16, 185, 129, 0.25);
+      background: rgba(249, 115, 22, 0.28);
       border-color: var(--primary-light);
       color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
     }
 
     /* Clickable Rhythm Game interactive tap effect on Avatar */
     .tap-hint {
       font-size: 0.8rem;
       color: var(--primary-light);
-      opacity: 0.8;
+      opacity: 0.85;
       margin-top: -1rem;
       margin-bottom: 1.5rem;
       cursor: pointer;
@@ -497,8 +497,8 @@
       font-family: 'Outfit', sans-serif;
       font-weight: 900;
       font-size: 1.4rem;
-      color: #00ff9d;
-      text-shadow: 0 0 10px #00ff9d, 0 0 20px #10b981;
+      color: #fbbf24;
+      text-shadow: 0 0 10px #fbbf24, 0 0 20px #f97316;
       pointer-events: none;
       z-index: 9999;
       animation: hitFlyUp 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
@@ -531,7 +531,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(16, 185, 129, 0.15);
+      background: rgba(249, 115, 22, 0.16);
       border: 1px solid var(--border-glow);
       color: var(--accent-neon);
       font-size: 0.82rem;
@@ -600,7 +600,7 @@
       transform: translateY(-8px);
       background: var(--bg-card-hover);
       border-color: var(--border-glow);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.25);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(249, 115, 22, 0.3);
     }
 
     .hobby-card:hover::before {
@@ -618,13 +618,13 @@
       width: 60px;
       height: 60px;
       border-radius: var(--radius-md);
-      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 78, 59, 0.5));
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.28), rgba(154, 52, 18, 0.5));
       border: 1px solid var(--border-glow);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.85rem;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
       transition: transform 0.3s ease;
     }
 
@@ -636,7 +636,7 @@
       font-family: 'Outfit', sans-serif;
       font-size: 1.6rem;
       font-weight: 900;
-      color: rgba(52, 211, 153, 0.2);
+      color: rgba(251, 146, 60, 0.25);
       letter-spacing: 1px;
       line-height: 1;
     }
@@ -662,10 +662,10 @@
     /* Unique widgets inside hobby cards */
     /* 1. Rhythm Game widget */
     .rhythm-widget {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       border-radius: var(--radius-sm);
       padding: 0.75rem 1rem;
-      border: 1px solid rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.2);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -687,10 +687,10 @@
 
     /* 2. Light Novel widget */
     .novel-widget {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       border-radius: var(--radius-sm);
       padding: 0.75rem 1rem;
-      border: 1px solid rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.2);
       display: flex;
       align-items: center;
       gap: 0.8rem;
@@ -712,10 +712,10 @@
 
     /* 3. Music Player widget with Audio Bars */
     .music-widget {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.45);
       border-radius: var(--radius-sm);
       padding: 0.75rem 1rem;
-      border: 1px solid rgba(52, 211, 153, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.2);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -770,13 +770,13 @@
     }
 
     .skill-card {
-      background: linear-gradient(135deg, rgba(20, 48, 35, 0.85), rgba(8, 22, 15, 0.92));
+      background: linear-gradient(135deg, rgba(62, 33, 14, 0.88), rgba(26, 12, 5, 0.95));
       border: 2px solid var(--primary);
       border-radius: var(--radius-lg);
       padding: 3rem 2.5rem;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(16, 185, 129, 0.2);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(249, 115, 22, 0.25);
     }
 
     .skill-bg-glow {
@@ -786,7 +786,7 @@
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 255, 157, 0.25), transparent 70%);
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.28), transparent 70%);
       pointer-events: none;
     }
 
@@ -811,7 +811,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(0, 255, 157, 0.15);
+      background: rgba(251, 191, 36, 0.16);
       border: 1px solid var(--accent-neon);
       color: var(--accent-neon);
       font-size: 0.8rem;
@@ -831,7 +831,7 @@
 
     .skill-title span {
       color: var(--accent-neon);
-      text-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+      text-shadow: 0 0 15px rgba(251, 191, 36, 0.45);
     }
 
     .skill-quote {
@@ -843,8 +843,8 @@
 
     /* Skill Progress Bar & Target Display */
     .progress-box {
-      background: rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(52, 211, 153, 0.25);
+      background: rgba(0, 0, 0, 0.48);
+      border: 1px solid rgba(251, 146, 60, 0.28);
       border-radius: var(--radius-md);
       padding: 1.5rem;
     }
@@ -904,8 +904,8 @@
     }
 
     .step-item {
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(52, 211, 153, 0.2);
+      background: rgba(249, 115, 22, 0.12);
+      border: 1px solid rgba(251, 146, 60, 0.22);
       border-radius: var(--radius-sm);
       padding: 0.6rem 0.4rem;
     }
@@ -929,7 +929,7 @@
     .footer-section {
       padding: 3rem 0 4rem;
       text-align: center;
-      border-top: 1px solid rgba(52, 211, 153, 0.12);
+      border-top: 1px solid rgba(251, 146, 60, 0.15);
     }
 
     .footer-quote {
@@ -955,22 +955,22 @@
       font-size: 0.95rem;
       font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+      box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
       transition: all 0.3s ease;
       text-decoration: none;
     }
 
     .back-to-top-btn:hover {
       background: var(--accent-neon);
-      color: #042114;
+      color: #3b1100;
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 255, 157, 0.5);
+      box-shadow: 0 8px 25px rgba(251, 191, 36, 0.55);
     }
 
     .copyright {
       margin-top: 2rem;
       font-size: 0.82rem;
-      color: rgba(167, 243, 208, 0.5);
+      color: rgba(254, 215, 170, 0.5);
     }
 
     /* ===================================================
@@ -1042,39 +1042,39 @@
         <div class="avatar-glow"></div>
         <div class="avatar-ring"></div>
         <div class="avatar-inner">
-          <!-- Anime-styled Vector Character Portrait (Green Theme & Headphone) -->
+          <!-- Anime-styled Vector Character Portrait (Orange-Yellow Theme & Headphone) -->
           <svg class="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="阿巴阿巴的動漫風頭像">
             <!-- Background inside avatar -->
-            <rect width="200" height="200" fill="#0d2e1f"/>
+            <rect width="200" height="200" fill="#2d1508"/>
             <!-- Neon glow aura -->
-            <circle cx="100" cy="100" r="75" fill="none" stroke="#34d399" stroke-width="2" opacity="0.3"/>
-            <!-- Anime Hair Back -->
-            <path d="M45,130 C30,70 60,30 100,28 C140,30 170,70 155,130 C150,150 145,160 145,160 L55,160 Z" fill="#064e3b"/>
+            <circle cx="100" cy="100" r="75" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.35"/>
+            <!-- Anime Hair Back (Auburn/Orange) -->
+            <path d="M45,130 C30,70 60,30 100,28 C140,30 170,70 155,130 C150,150 145,160 145,160 L55,160 Z" fill="#7c2d12"/>
             <!-- Headphone Band -->
-            <path d="M50,95 C45,40 155,40 150,95" fill="none" stroke="#34d399" stroke-width="8" stroke-linecap="round"/>
-            <rect x="36" y="80" width="16" height="34" rx="8" fill="#10b981"/>
-            <rect x="148" y="80" width="16" height="34" rx="8" fill="#10b981"/>
+            <path d="M50,95 C45,40 155,40 150,95" fill="none" stroke="#fb923c" stroke-width="8" stroke-linecap="round"/>
+            <rect x="36" y="80" width="16" height="34" rx="8" fill="#f97316"/>
+            <rect x="148" y="80" width="16" height="34" rx="8" fill="#f97316"/>
             <!-- Anime Face -->
-            <path d="M65,85 C65,130 80,148 100,148 C120,148 135,130 135,85 Z" fill="#fee2e2"/>
+            <path d="M65,85 C65,130 80,148 100,148 C120,148 135,130 135,85 Z" fill="#fff1ee"/>
             <!-- Anime Blushes -->
-            <ellipse cx="78" cy="115" rx="8" ry="4" fill="#fca5a5" opacity="0.7"/>
-            <ellipse cx="122" cy="115" rx="8" ry="4" fill="#fca5a5" opacity="0.7"/>
-            <!-- Anime Eyes (Big vibrant emerald green eyes) -->
-            <ellipse cx="80" cy="102" rx="7" ry="10" fill="#047857"/>
-            <ellipse cx="120" cy="102" rx="7" ry="10" fill="#047857"/>
+            <ellipse cx="78" cy="115" rx="8" ry="4" fill="#fda4af" opacity="0.75"/>
+            <ellipse cx="122" cy="115" rx="8" ry="4" fill="#fda4af" opacity="0.75"/>
+            <!-- Anime Eyes (Big vibrant amber-gold sunset eyes) -->
+            <ellipse cx="80" cy="102" rx="7" ry="10" fill="#c2410c"/>
+            <ellipse cx="120" cy="102" rx="7" ry="10" fill="#c2410c"/>
             <circle cx="82" cy="99" r="3" fill="#ffffff"/>
             <circle cx="122" cy="99" r="3" fill="#ffffff"/>
-            <circle cx="78" cy="105" r="1.5" fill="#a7f3d0"/>
-            <circle cx="118" cy="105" r="1.5" fill="#a7f3d0"/>
+            <circle cx="78" cy="105" r="1.5" fill="#fde047"/>
+            <circle cx="118" cy="105" r="1.5" fill="#fde047"/>
             <!-- Anime Smile -->
-            <path d="M93,124 Q100,132 107,124" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
-            <!-- Anime Front Bangs -->
-            <path d="M58,80 Q80,110 88,85 Q100,115 112,85 Q125,110 142,80 Q145,55 100,48 Q55,55 58,80 Z" fill="#0f766e"/>
+            <path d="M93,124 Q100,132 107,124" fill="none" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Anime Front Bangs (Vibrant Orange Sunset) -->
+            <path d="M58,80 Q80,110 88,85 Q100,115 112,85 Q125,110 142,80 Q145,55 100,48 Q55,55 58,80 Z" fill="#ea580c"/>
             <!-- Star sparkle highlight on hair -->
-            <polygon points="125,58 128,64 134,67 128,70 125,76 122,70 116,67 122,64" fill="#00ff9d"/>
+            <polygon points="125,58 128,64 134,67 128,70 125,76 122,70 116,67 122,64" fill="#fbbf24"/>
             <!-- Cute Hoodie Collar -->
-            <path d="M60,155 Q100,180 140,155 L150,200 L50,200 Z" fill="#065f46"/>
-            <path d="M85,160 L100,185 L115,160" fill="none" stroke="#34d399" stroke-width="4"/>
+            <path d="M60,155 Q100,180 140,155 L150,200 L50,200 Z" fill="#9a3412"/>
+            <path d="M85,160 L100,185 L115,160" fill="none" stroke="#fb923c" stroke-width="4"/>
           </svg>
         </div>
         <div class="avatar-badge">
@@ -1101,8 +1101,8 @@
           <span>動漫風格 (Anime)</span>
         </div>
         <div class="meta-pill">
-          <span>💚</span>
-          <span>翡翠薄荷綠 (Mint Green)</span>
+          <span>🧡</span>
+          <span>活力橘黃色 (Orange & Yellow)</span>
         </div>
         <div class="meta-pill">
           <span>⚡</span>
@@ -1182,7 +1182,7 @@
           <div class="music-widget">
             <div class="music-info">
               <span class="music-title">♬ 動漫神曲播放中</span>
-              <span class="music-artist">BGM: Cyber Emerald Beats</span>
+              <span class="music-artist">BGM: Sunset Amber Beats</span>
             </div>
             <div class="equalizer-bars" aria-hidden="true">
               <div class="eq-bar"></div>
@@ -1256,7 +1256,7 @@
         <span>返回頂部</span>
       </a>
       <p class="copyright">
-        © 阿巴阿巴的個人自我介紹 | 動漫風個人首頁 (Green Theme)
+        © 阿巴阿巴的個人自我介紹 | 動漫風個人首頁 (Orange-Yellow Theme)
       </p>
     </footer>
 
@@ -1264,7 +1264,8 @@
 
   <!-- ===================================================
        10. JAVASCRIPT: SCROLL REVEAL & INTERACTIVITY
-       =================================================== -->
+       =================================================== */
+  -->
   <script>
     // 1. Intersection Observer for Scroll Fade-in Animation
     document.addEventListener('DOMContentLoaded', () => {
